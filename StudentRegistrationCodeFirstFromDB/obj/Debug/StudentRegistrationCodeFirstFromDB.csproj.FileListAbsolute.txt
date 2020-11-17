@@ -1,0 +1,74 @@
+C:\Users\mhrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.dll.config
+C:\Users\mhrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.dll
+C:\Users\mhrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.pdb
+C:\Users\mhrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.dll
+C:\Users\mhrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mhrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.xml
+C:\Users\mhrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mhrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csprojAssemblyReference.cache
+C:\Users\mhrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csproj.CoreCompileInputs.cache
+C:\Users\mhrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csproj.CopyComplete
+C:\Users\mhrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.dll
+C:\Users\mhrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.pdb
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.dll.config
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.dll
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.pdb
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\bin\Debug\EFControllerUtilities.dll
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.dll
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\bin\Debug\EFControllerUtilities.pdb
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\bin\Debug\EFControllerUtilities.dll.config
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.xml
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csprojAssemblyReference.cache
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csproj.CoreCompileInputs.cache
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csproj.CopyComplete
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.dll
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Class 07 Exercises\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.pdb
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Lab 07 - Student Registration Solution\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.dll.config
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Lab 07 - Student Registration Solution\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.dll
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Lab 07 - Student Registration Solution\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.pdb
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Lab 07 - Student Registration Solution\StudentRegistrationCodeFirstFromDB\bin\Debug\EFControllerUtilities.dll
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Lab 07 - Student Registration Solution\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.dll
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Lab 07 - Student Registration Solution\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Lab 07 - Student Registration Solution\StudentRegistrationCodeFirstFromDB\bin\Debug\EFControllerUtilities.pdb
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Lab 07 - Student Registration Solution\StudentRegistrationCodeFirstFromDB\bin\Debug\EFControllerUtilities.dll.config
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Lab 07 - Student Registration Solution\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.xml
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Lab 07 - Student Registration Solution\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Lab 07 - Student Registration Solution\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csprojAssemblyReference.cache
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Lab 07 - Student Registration Solution\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csproj.CoreCompileInputs.cache
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Lab 07 - Student Registration Solution\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csproj.CopyComplete
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Lab 07 - Student Registration Solution\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.dll
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Exercises\Class 07\Lab 07 - Student Registration Solution\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.pdb
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.dll.config
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.dll
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.pdb
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationCodeFirstFromDB\bin\Debug\EFControllerUtilities.dll
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.dll
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationCodeFirstFromDB\bin\Debug\EFControllerUtilities.pdb
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationCodeFirstFromDB\bin\Debug\EFControllerUtilities.dll.config
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.xml
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csprojAssemblyReference.cache
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csproj.CoreCompileInputs.cache
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csproj.CopyComplete
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.dll
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.pdb
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.dll.config
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.dll
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.pdb
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\bin\Debug\EFControllerUtilities.dll
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.dll
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\bin\Debug\EFControllerUtilities.pdb
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\bin\Debug\EFControllerUtilities.dll.config
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.xml
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csprojAssemblyReference.cache
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csproj.CoreCompileInputs.cache
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csproj.CopyComplete
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.dll
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.pdb
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationDB.dll
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationDB.pdb

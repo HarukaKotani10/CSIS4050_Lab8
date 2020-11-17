@@ -1,0 +1,16 @@
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationDB\bin\Debug\StudentRegistrationDB.dacpac
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationDB\bin\Debug\StudentRegistrationDB.dll
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationDB\bin\Debug\StudentRegistrationDB.pdb
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.sqlprojAssemblyReference.cache
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationDB\obj\Debug\Model.xml
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationDB\obj\Debug\refactor.xml
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationDB\obj\Debug\postdeploy.sql
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationDB\obj\Debug\predeploy.sql
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.dll
+C:\Users\Michael Hrybyk\OneDrive\Documents\CSIS 3540\Labs\Lab08Student RegistrationSolution\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.pdb
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationDB\bin\Debug\StudentRegistrationDB.dacpac
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationDB\bin\Debug\StudentRegistrationDB.dll
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationDB\bin\Debug\StudentRegistrationDB.pdb
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.sqlprojAssemblyReference.cache
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.dll
+C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.pdb
