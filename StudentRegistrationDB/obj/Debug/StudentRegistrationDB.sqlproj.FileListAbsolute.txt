@@ -14,3 +14,9 @@ C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationDB\bin\De
 C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.sqlprojAssemblyReference.cache
 C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.dll
 C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.pdb
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationDB\bin\Debug\StudentRegistrationDB.dacpac
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationDB\bin\Debug\StudentRegistrationDB.dll
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationDB\bin\Debug\StudentRegistrationDB.pdb
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.sqlprojAssemblyReference.cache
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.dll
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.pdb

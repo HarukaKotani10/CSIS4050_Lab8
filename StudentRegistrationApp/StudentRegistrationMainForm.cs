@@ -76,7 +76,10 @@ namespace StudentRegistrationApp
 
             };
 
+
+
             dataGrid.Columns.AddRange(columns);
+
 
             context.Courses.Include(d => d.Students).Load();
             Department deparmtnet = new Department();
@@ -102,14 +105,17 @@ namespace StudentRegistrationApp
 
 */
 
+            
 
             foreach (Student student in context.Students)
                 foreach (Course course in student.Courses)
-                {
-
-                    dataGrid.Rows.Add(new string[] { course.DepartmentId.ToString(), course.CourseNumber.ToString(), course.CourseName,
-                    student.StudentId.ToString(), student.StudentLastName});
-                }
+                    foreach (Department department in context.Departments.Where(c => c.DepartmentId == course.DepartmentId))
+                    {
+                        dataGrid.Rows.Add(new string[] { department.DepartmentCode.ToString(), course.CourseNumber.ToString(), course.CourseName,
+                        student.StudentId.ToString(), student.StudentLastName});
+                    }
+                   
+                
                     
 
         }

@@ -72,3 +72,20 @@ C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirst
 C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.pdb
 C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationDB.dll
 C:\Users\17789\Desktop\C#\Lab08Student Registration\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationDB.pdb
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.dll.config
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.dll
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationCodeFirstFromDB.pdb
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationCodeFirstFromDB\bin\Debug\EFControllerUtilities.dll
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.dll
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationDB.dll
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationCodeFirstFromDB\bin\Debug\EFControllerUtilities.pdb
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationCodeFirstFromDB\bin\Debug\EFControllerUtilities.dll.config
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationCodeFirstFromDB\bin\Debug\StudentRegistrationDB.pdb
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.xml
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationCodeFirstFromDB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csprojAssemblyReference.cache
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csproj.CoreCompileInputs.cache
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.csproj.CopyComplete
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.dll
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationCodeFirstFromDB\obj\Debug\StudentRegistrationCodeFirstFromDB.pdb
