@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using StudentRegistrationCodeFirstFromDB;
+using System.Diagnostics;
 
 namespace StudentRegisatrationValidation
 {
@@ -11,7 +10,7 @@ namespace StudentRegisatrationValidation
     {
 
         /// <summary>
-        /// Make sure all customer info exists and is not blank
+        /// Make sure all student info exists and is not blank
         /// </summary>
         /// <param name="car"></param>
         /// <returns></returns>
@@ -20,5 +19,6 @@ namespace StudentRegisatrationValidation
             return (student.StudentFirstName == null || student.StudentFirstName.Trim().Length == 0 ||
                 student.StudentLastName == null || student.StudentLastName.Trim().Length == 0);
         }
+
     }
 }

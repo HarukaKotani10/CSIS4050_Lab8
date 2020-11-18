@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using StudentRegistrationCodeFirstFromDB;
 using System.Data.Entity;
@@ -29,11 +26,9 @@ namespace StudentRegistrationApp
             context.SeedDatabase();
             context.SaveChanges();
 
-            Student student = new Student();
-
             this.Load += (s, e) => StudentRegistratioMainForm_Load();
 
-          
+            // set the event handlers for buttons
 
             AddOrUpdateStudent addOrUpdateStudentForm = new AddOrUpdateStudent();
             buttonStudent.Click += (s, e) => AddOrUpdateForm<Student>(dataGridViewStudent, addOrUpdateStudentForm);
@@ -44,8 +39,10 @@ namespace StudentRegistrationApp
             AddOrUpdateCourse addOrUpdateCourseForm = new AddOrUpdateCourse();
             buttonCourse.Click += (s, e) => AddOrUpdateForm<Course>(dataGridViewCourse, addOrUpdateCourseForm);
 
-        }
+            buttonRegister.Click += ButtonRegister_Click;
+            buttonDrop.Click += ButtonDrop_Click;
 
+        }
 
         /// <summary>
         /// Set up all of the datagridview controls
@@ -59,10 +56,19 @@ namespace StudentRegistrationApp
             InitializeDataGridView<Course>(dataGridViewCourse, "Courses");
             ItitializeDataGridViewRegistration(dataGridViewRegistration);
 
-            // InitializeDataGridView<Student>(dataGridViewRegistration, "StudentCourses");
+            //  set unnecessary columns to invisible
+            this.dataGridViewStudent.Columns["Courses"].Visible = false;
+            this.dataGridViewStudent.Columns["Department"].Visible = false;
+            this.dataGridViewCourse.Columns["Students"].Visible = false;
+            this.dataGridViewCourse.Columns["Department"].Visible = false;
+            this.dataGridViewDepartment.Columns["Courses"].Visible = false;
+            this.dataGridViewDepartment.Columns["Students"].Visible = false;
+
         }
 
-
+        /// <summary>
+        /// Set up and reload registrationGridView 
+        /// </summary>
         private void ItitializeDataGridViewRegistration(DataGridView dataGrid)
         {
             dataGrid.Columns.Clear(); // any columns created by the designer, get rid of them
@@ -78,52 +84,17 @@ namespace StudentRegistrationApp
 
             };
 
-
             dataGrid.Columns.AddRange(columns);
-
-
-            context.Courses.Include(d => d.Students).Load();
-            Department deparmtnet = new Department();
-
-
-            /*            var studentCourse = from st in context.Students
-                                            join cs in context.Courses o equals cs.CourseId
-
-                                            where st.Courses == cs.Students
-                                            select new {st.StudentLastName, st.StudentId,  }
-
-
-                        foreach (Student student in context.Students)
-                            foreach (Course course in student.Courses)
-                            {
-
-                                 dp = context.Departments
-                                 .Where(b => b.DepartmentId == course.DepartmentId)
-                                 .Select(b => b.DepartmentCode);
-
-
-                            }
-
-            */
-
-
-   
-
-  /*          var sortedCourse = from c in context.Courses
-                               join d in context.Departments
-                               on c.DepartmentId equals d.DepartmentId
-                               orderby d.DepartmentCode
-                               select c;
-*/
 
             var sortedStudent = from s in context.Students
                                 join d in context.Departments
                                 on s.DepartmentId equals d.DepartmentId
-                                orderby d.DepartmentCode
+                                orderby d.DepartmentCode // sorte by departmentCode
                                 select s;
 
+            context.Courses.Include(d => d.Students).Load();
 
-
+            // add rows to registration table
             foreach (Student student in sortedStudent)
                 foreach (Course course in student.Courses)
                     foreach (Department d in context.Departments.Where(c => c.DepartmentId == course.DepartmentId))
@@ -131,7 +102,54 @@ namespace StudentRegistrationApp
                         dataGrid.Rows.Add(new string[] { d.DepartmentCode.ToString(), course.CourseNumber.ToString(), course.CourseName,
                         student.StudentId.ToString(), student.StudentLastName});
                     }
-         
+
+        }
+
+
+        /// <summary>
+        /// Register selected student and course 
+        /// and add to the registration table
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButtonRegister_Click(object sender, EventArgs e)
+        {
+
+            // check if bothe student and course are selected
+            if (dataGridViewStudent.SelectedRows.Count == 0 || dataGridViewCourse.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("No students or Courses selected");
+                return;
+            }
+
+
+            foreach (DataGridViewRow studentRow in dataGridViewStudent.SelectedRows)
+                foreach (DataGridViewRow courseRow in dataGridViewCourse.SelectedRows)
+                {
+                    int studentId = (int)studentRow.Cells[0].Value; // get selected studentId
+                    int courseId = (int)studentRow.Cells[0].Value; // get selected courseId
+
+                    foreach (Student student in context.Students.Where(c => c.StudentId == studentId)) 
+                        foreach (Course course in context.Courses.Where(b => b.CourseId == courseId))
+                            foreach (Department d in context.Departments.Where(c => c.DepartmentId == course.DepartmentId))
+                                dataGridViewRegistration.Rows.Add(new string[] { d.DepartmentCode, course.CourseNumber.ToString(),
+                                course.CourseName, student.StudentId.ToString(), student.StudentLastName }); // add to the datagridview
+                    
+                }
+            }
+
+
+        /// <summary>
+        /// Remove selected Row
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButtonDrop_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridViewRegistration.SelectedRows)
+            {
+                dataGridViewRegistration.Rows.RemoveAt(row.Index);
+            }
         }
 
         /// <summary>
@@ -169,16 +187,7 @@ namespace StudentRegistrationApp
 
             gridView.DataSource = SetBindingList<T>();
 
-         
-            // columns are autocreated, but skip the navigation properties
-            // this MUST come after DataSource is set
-
-          /*  foreach (string column in navProperties)
-                gridView.Columns[column].Visible = false;*/
-
-
         }
-
 
         /// <summary>
         /// Update the database after the user has deleted the row. The binding list will
@@ -272,7 +281,7 @@ namespace StudentRegistrationApp
 
                 dataGridView.Refresh();
 
-                // ALWAYS update the customer orders report, hence use of AsNoTracking()
+                // ALWAYS update the registrationGridView, hence use of AsNoTracking()
 
                 ItitializeDataGridViewRegistration(dataGridViewRegistration);
             }
@@ -306,34 +315,6 @@ namespace StudentRegistrationApp
 
 
         }
-
-
-        /// <summary>
-        /// Save changes in the context and update the controls
-        /// </summary>
-        /// <param name="terminate"></param>
-        private void SaveChanges(bool terminate = true)
-        {
-            try
-            {
-                context.SaveChanges();
-
-                dataGridViewStudent.Refresh();
-                dataGridViewDepartment.Refresh();
-                dataGridViewCourse.Refresh();
-             
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Database operation failed - exiting: " + e.Message);
-                if (terminate)
-                {
-                    context.Dispose();
-                    Environment.Exit(1);
-                }
-            }
-        }
-
 
     }
 }

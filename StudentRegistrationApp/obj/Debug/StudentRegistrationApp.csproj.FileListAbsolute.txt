@@ -75,3 +75,5 @@ C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegistrationApp\obj\De
 C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegistrationApp\obj\Debug\StudentRegistrationApp.pdb
 C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegistrationApp\obj\Debug\StudentRegistrationApp.AddOrUpdateDepartment.resources
 C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegistrationApp\obj\Debug\StudentRegistrationApp.AddOrUpdateCourse.resources
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationApp\obj\Debug\StudentRegistrationApp.AddOrUpdateCourse.resources
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationApp\obj\Debug\StudentRegistrationApp.AddOrUpdateDepartment.resources

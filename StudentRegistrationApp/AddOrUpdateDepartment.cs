@@ -1,15 +1,9 @@
 ﻿using StudentRegistrationCodeFirstFromDB;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.Entity;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using StudentRegisatrationValidation;
 
 namespace StudentRegistrationApp
 {
@@ -60,10 +54,22 @@ namespace StudentRegistrationApp
                 return;
             }
 
-            // update the entity
+            string originalDepartment = department.DepartmentId.ToString();
 
             department.DepartmentCode = textBoxDepartmentCode.Text;
             department.DepartmentName = textBoxDepartmentName.Text;
+
+            if (department.InfoIsInvalid())
+            {
+                MessageBox.Show("department information is missing.");
+                return;
+            }
+
+            if (originalDepartment != department.DepartmentId.ToString() && department.DepartmentExists())
+            {
+                MessageBox.Show("DepartmentId already exists: " + department.DepartmentId);
+                return;
+            }
 
             // now update the db
 
@@ -105,6 +111,19 @@ namespace StudentRegistrationApp
             try
             {
                 context.Departments.Add(department);
+
+                if (department.InfoIsInvalid())
+                {
+                    MessageBox.Show("department information is missing.");
+                    return;
+                }
+
+                if (department.DepartmentExists())
+                {
+                    MessageBox.Show("DepartmentId already exists: " + department.DepartmentId);
+                    return;
+                }
+
                 context.SaveChanges();
             }
             catch (Exception ex)
@@ -112,6 +131,8 @@ namespace StudentRegistrationApp
                 MessageBox.Show("Cannot add Department to database" + ex.InnerException.InnerException.Message);
                 return;
             }
+
+
 
             // if everyting is ok, get rid of the context, and close the form.
 

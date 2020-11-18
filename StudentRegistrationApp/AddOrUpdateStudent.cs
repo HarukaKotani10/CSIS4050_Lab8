@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using StudentRegistrationCodeFirstFromDB;
 using EFControllerUtilities;
@@ -25,7 +20,6 @@ namespace StudentRegistrationApp
             this.Load += AddOrUpdateStudentForm_Load;
             buttonStudentAdd.Click += ButtonAdd_Click;
             buttonStudentUpdate.Click += ButtonUpdate_Click;
-
 
             // register event handler for when a car is selected
             listBoxStudent.SelectedIndexChanged += (s, e) => GetStudent();
@@ -50,6 +44,7 @@ namespace StudentRegistrationApp
 			// no student is selected to start
 
 			listBoxStudent.SelectedIndex = -1;
+			listBoxStudentDepartment.SelectedIndex = -1;
 
 			// set all textboxes to blank
 
@@ -59,7 +54,7 @@ namespace StudentRegistrationApp
 		}
 
 		/// <summary>
-		/// Get a selected car from the listbox and fill in the textboxes with the
+		/// Get a selected student from the listbox and fill in the textboxes with the
 		/// info.
 		/// </summary>
 		private void GetStudent()
@@ -71,16 +66,19 @@ namespace StudentRegistrationApp
 
 			foreach (Department department in context.Departments)
 				listBoxStudentDepartment.Items.Add(department.DepartmentCode);
+
+			listBoxStudentDepartment.SelectedIndex = Convert.ToInt32(student.DepartmentId -1);
+
 		}
 
 		/// <summary>
-		/// Update the db with the new car data
+		/// Update the db with the new student data
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
 		private void ButtonUpdate_Click(object sender, EventArgs e)
 		{
-			// make sure a car is selected
+			// make sure a student is selected
 			// could use SelectedIndex < 0 here as well
 
 			if (!(listBoxStudent.SelectedItem is Student student))
@@ -88,22 +86,12 @@ namespace StudentRegistrationApp
 				MessageBox.Show("Student to be updated must be selected");
 				return;
 			}
-			//string originalFirstName = student.StudentFirstName;
 
 			string selectedDept = listBoxStudentDepartment.SelectedItem.ToString();
 
-			var d = from i in context.Departments
-					where i.DepartmentCode == selectedDept
-					select i.DepartmentId;
-
-			int deptId = 0;
-
-			foreach (var i in d)
-				deptId = i;
-
 			student.StudentFirstName = textBoxFirstName.Text;
 			student.StudentLastName = textBoxLastName.Text;
-			student.DepartmentId = deptId;
+			student.DepartmentId = GetDepartmentId(selectedDept); 
 
 
 			if (student.InfoIsInvalid())
@@ -111,12 +99,6 @@ namespace StudentRegistrationApp
                 MessageBox.Show("Student information is missing.");
                 return;
             }
-
-/*            if (originalFirstName != student.StudentFirstName && student.CarColorExists())
-            {
-                MessageBox.Show("Car color already exists: " + student.StudentFirstName);
-                return;
-            }*/
 
             if (Controller<StudentRegistrationEntities, Student>.UpdateEntity(student) == false)
 			{
@@ -132,6 +114,24 @@ namespace StudentRegistrationApp
 		}
 
 		/// <summary>
+		/// Get selected departmentId
+		/// </summary>
+		/// <param name="string"></param>
+		private int GetDepartmentId(string selected)
+        {
+			var d = from i in context.Departments
+					where i.DepartmentCode == selected
+					select i.DepartmentId;
+
+			int departmentId = 0;
+
+			foreach (var i in d)
+				departmentId = i;
+
+			return departmentId;
+		}
+
+		/// <summary>
 		/// Add a car to the db
 		/// </summary>
 		/// <param name="sender"></param>
@@ -141,23 +141,13 @@ namespace StudentRegistrationApp
 
 			string selectedDept = listBoxStudentDepartment.SelectedItem.ToString();
 
-			var d = from i in context.Departments
-					where i.DepartmentCode == selectedDept
-					select i.DepartmentId;
-
-			int deptId = 0;
-
-			foreach (var i in d)
-				deptId = i;
-
 			// get the car data from the textboxes
 
-			
-				Student student = new Student()
-				{
-					StudentFirstName = textBoxFirstName.Text,
-					StudentLastName = textBoxLastName.Text,
-					DepartmentId = deptId
+			Student student = new Student()
+			{
+				StudentFirstName = textBoxFirstName.Text,
+				StudentLastName = textBoxLastName.Text,
+				DepartmentId = GetDepartmentId(selectedDept)
 				};
 
             // validity checks
@@ -168,20 +158,13 @@ namespace StudentRegistrationApp
                 return;
             }
 
-/*            if (student.CarColorExists())
-            {
-                MessageBox.Show("Car color already exists: " + student.StudentFirstName);
-                return;
-            }*/
-
             // now update the db
 
             if (Controller<StudentRegistrationEntities, Student>.AddEntity(student) == null)
 			{
-				MessageBox.Show("Cannot add car to database");
+				MessageBox.Show("Cannot add student to database");
 				return;
 			}
-
 
 			// if everyting is ok, close the form.
 

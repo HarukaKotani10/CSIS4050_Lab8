@@ -1,17 +1,10 @@
 ﻿using EFControllerUtilities;
 using StudentRegistrationCodeFirstFromDB;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.Entity;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using StudentRegisatrationValidation;
 namespace StudentRegistrationApp
 {
     public partial class AddOrUpdateCourse : Form
@@ -34,17 +27,22 @@ namespace StudentRegistrationApp
             this.FormClosed += (s, e) => context.Dispose();
         }
 
+        /// <summary>
+        /// Get a selected course from the listbox
+        /// </summary>
         private void GetCourses()
         {
             if (!(listBoxCourses.SelectedItem is Course course))
                 return;
             textBoxCourseName.Text = course.CourseName;
             textBoxCourseNumber.Text = course.CourseNumber.ToString();
-
-           /* foreach (Department department in context.Departments)
-                listBoxDepartment.Items.Add(department.DepartmentId);*/
         }
 
+        /// <summary>
+        /// Update the db with the new course data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonUpdateCourse_Click(object sender, EventArgs e)
         {
             if (!(listBoxCourses.SelectedItem is Course course))
@@ -56,9 +54,23 @@ namespace StudentRegistrationApp
             // update the entity
             int deptId = listBoxDepartment.SelectedIndex + 1;
 
+            string originalCourse = course.CourseId.ToString();
+
             course.CourseName = textBoxCourseName.Text;
             course.CourseNumber = Convert.ToInt32(textBoxCourseNumber.Text);
             course.DepartmentId = deptId;
+
+            if (course.InfoIsInvalid())
+            {
+                MessageBox.Show("course information is missing.");
+                return;
+            }
+
+            if (originalCourse != course.CourseId.ToString() && course.CourseExists())
+            {
+                MessageBox.Show("course already exists: " + course.CourseId +1 + "" + course.CourseNumber);
+                return;
+            }
 
             try
             {
@@ -86,23 +98,34 @@ namespace StudentRegistrationApp
             Close(); // this will not dispose the form on hide!
         }
 
+        /// <summary>
+        /// Add a course to the db
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonAddCourse_Click(object sender, EventArgs e)
         {
-          //  string selectedDept = listBoxDepartment.SelectedItem.ToString();
-
-         /*   var d = from i in context.Departments
-                    where i.DepartmentName == selectedDept
-                    select i.DepartmentId;*/
-
-            int deptId = listBoxDepartment.SelectedIndex+1;
-
+             
+            int departmentId = listBoxDepartment.SelectedIndex +1; // get selected deparmtnetId
             
             Course course = new Course()
             {   
                 CourseName = textBoxCourseName.Text,
                 CourseNumber = Convert.ToInt32(textBoxCourseNumber.Text),
-                DepartmentId = deptId
+                DepartmentId = departmentId
             };
+
+            if (course.InfoIsInvalid())
+            {
+                MessageBox.Show("course information is missing.");
+                return;
+            }
+
+            if (course.CourseExists())
+            {
+                MessageBox.Show("course already exists: " + course.CourseId + 1 + "" + course.CourseNumber);
+                return;
+            }
 
             if (Controller<StudentRegistrationEntities, Course>.AddEntity(course) == null)
             {
@@ -115,6 +138,14 @@ namespace StudentRegistrationApp
             Close(); // this will not dispose the form on hide!
         }
 
+        /// <summary>
+        /// The form is initially created, but loaded each time it is shown.
+        /// So make sure the context is created in the Load event.
+        /// 
+        /// This is the handler for the Load event.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddOrUpdateCourseForm_Load(object sender, EventArgs e)
         {
             this.Tag = null;
