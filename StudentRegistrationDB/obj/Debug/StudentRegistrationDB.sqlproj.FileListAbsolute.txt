@@ -20,3 +20,13 @@ C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationDB\bin\Debug\St
 C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.sqlprojAssemblyReference.cache
 C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.dll
 C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.pdb
+C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegistrationDB\bin\Debug\StudentRegistrationDB.dacpac
+C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegistrationDB\bin\Debug\StudentRegistrationDB.dll
+C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegistrationDB\bin\Debug\StudentRegistrationDB.pdb
+C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.sqlprojAssemblyReference.cache
+C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegistrationDB\obj\Debug\Model.xml
+C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegistrationDB\obj\Debug\refactor.xml
+C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegistrationDB\obj\Debug\postdeploy.sql
+C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegistrationDB\obj\Debug\predeploy.sql
+C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.dll
+C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegistrationDB\obj\Debug\StudentRegistrationDB.pdb
