@@ -28,7 +28,6 @@ namespace StudentRegistrationApp
 
 
             // register event handler for when a car is selected
-
             listBoxStudent.SelectedIndexChanged += (s, e) => GetStudent();
 
         }
@@ -72,10 +71,7 @@ namespace StudentRegistrationApp
 
 			foreach (Department department in context.Departments)
 				listBoxStudentDepartment.Items.Add(department.DepartmentCode);
-
 		}
-
-
 
 		/// <summary>
 		/// Update the db with the new car data
@@ -94,10 +90,6 @@ namespace StudentRegistrationApp
 			}
 			//string originalFirstName = student.StudentFirstName;
 
-			student.StudentFirstName = textBoxFirstName.Text;
-			student.StudentLastName = textBoxLastName.Text;
-			student.DepartmentId = 1;
-/*
 			string selectedDept = listBoxStudentDepartment.SelectedItem.ToString();
 
 			var d = from i in context.Departments
@@ -109,7 +101,10 @@ namespace StudentRegistrationApp
 			foreach (var i in d)
 				deptId = i;
 
-			student.DepartmentId = deptId;*/
+			student.StudentFirstName = textBoxFirstName.Text;
+			student.StudentLastName = textBoxLastName.Text;
+			student.DepartmentId = deptId;
+
 
 			if (student.InfoIsInvalid())
             {
@@ -128,6 +123,8 @@ namespace StudentRegistrationApp
 				MessageBox.Show("Cannot update car to database");
 				return;
 			}
+
+			this.Tag = student.StudentId;
 
 			this.DialogResult = DialogResult.OK;
 

@@ -56,7 +56,7 @@ namespace StudentRegistrationApp
 
             if (!(listBoxAddOrUpdateDepartment.SelectedItem is Department department))
             {
-                MessageBox.Show("Customer to be updated must be selected");
+                MessageBox.Show("Department to be updated must be selected");
                 return;
             }
 
@@ -138,11 +138,11 @@ namespace StudentRegistrationApp
             context.SaveChanges();
             context.Departments.Load();
 
-            // bind the listbox of customers to the Customers table.
+            // bind the listbox of Department to the Department table.
 
             listBoxAddOrUpdateDepartment.DataSource = context.Departments.Local.ToBindingList();
 
-            // no car is selected to start
+            // no department is selected to start
 
             listBoxAddOrUpdateDepartment.SelectedIndex = -1;
 

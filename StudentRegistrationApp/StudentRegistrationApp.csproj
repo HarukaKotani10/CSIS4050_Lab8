@@ -82,6 +82,9 @@
     </Compile>
     <Compile Include="StudentRegistrationAppProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddOrUpdateCourse.resx">
+      <DependentUpon>AddOrUpdateCourse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddOrUpdateDepartment.resx">
       <DependentUpon>AddOrUpdateDepartment.cs</DependentUpon>
     </EmbeddedResource>

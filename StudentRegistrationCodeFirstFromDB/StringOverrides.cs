@@ -39,7 +39,7 @@ namespace StudentRegistrationCodeFirstFromDB
 		{
             return CourseId + ": " + (Department is null ? DepartmentId.ToString() : Department.DepartmentCode) + " " + CourseNumber;
 		}
-	}
+    }
 
 	/// <summary>
 	/// For debugging

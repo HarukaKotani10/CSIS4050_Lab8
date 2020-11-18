@@ -39,40 +39,44 @@
             // listBoxStudent
             // 
             this.listBoxStudent.FormattingEnabled = true;
-            this.listBoxStudent.ItemHeight = 20;
-            this.listBoxStudent.Location = new System.Drawing.Point(188, 39);
+            this.listBoxStudent.Location = new System.Drawing.Point(125, 25);
+            this.listBoxStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBoxStudent.Name = "listBoxStudent";
-            this.listBoxStudent.Size = new System.Drawing.Size(468, 344);
+            this.listBoxStudent.Size = new System.Drawing.Size(313, 225);
             this.listBoxStudent.TabIndex = 0;
             // 
             // textBoxFirstName
             // 
-            this.textBoxFirstName.Location = new System.Drawing.Point(199, 475);
+            this.textBoxFirstName.Location = new System.Drawing.Point(133, 309);
+            this.textBoxFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(100, 26);
+            this.textBoxFirstName.Size = new System.Drawing.Size(68, 20);
             this.textBoxFirstName.TabIndex = 1;
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Location = new System.Drawing.Point(199, 539);
+            this.textBoxLastName.Location = new System.Drawing.Point(133, 350);
+            this.textBoxLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(100, 26);
+            this.textBoxLastName.Size = new System.Drawing.Size(68, 20);
             this.textBoxLastName.TabIndex = 3;
             // 
             // buttonStudentAdd
             // 
-            this.buttonStudentAdd.Location = new System.Drawing.Point(224, 736);
+            this.buttonStudentAdd.Location = new System.Drawing.Point(149, 478);
+            this.buttonStudentAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonStudentAdd.Name = "buttonStudentAdd";
-            this.buttonStudentAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonStudentAdd.Size = new System.Drawing.Size(52, 26);
             this.buttonStudentAdd.TabIndex = 4;
             this.buttonStudentAdd.Text = "Add";
             this.buttonStudentAdd.UseVisualStyleBackColor = true;
             // 
             // buttonStudentUpdate
             // 
-            this.buttonStudentUpdate.Location = new System.Drawing.Point(476, 736);
+            this.buttonStudentUpdate.Location = new System.Drawing.Point(317, 478);
+            this.buttonStudentUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonStudentUpdate.Name = "buttonStudentUpdate";
-            this.buttonStudentUpdate.Size = new System.Drawing.Size(75, 23);
+            this.buttonStudentUpdate.Size = new System.Drawing.Size(60, 26);
             this.buttonStudentUpdate.TabIndex = 5;
             this.buttonStudentUpdate.Text = "Update";
             this.buttonStudentUpdate.UseVisualStyleBackColor = true;
@@ -80,23 +84,24 @@
             // listBoxStudentDepartment
             // 
             this.listBoxStudentDepartment.FormattingEnabled = true;
-            this.listBoxStudentDepartment.ItemHeight = 20;
-            this.listBoxStudentDepartment.Location = new System.Drawing.Point(199, 606);
+            this.listBoxStudentDepartment.Location = new System.Drawing.Point(133, 394);
+            this.listBoxStudentDepartment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBoxStudentDepartment.Name = "listBoxStudentDepartment";
-            this.listBoxStudentDepartment.Size = new System.Drawing.Size(120, 84);
+            this.listBoxStudentDepartment.Size = new System.Drawing.Size(81, 56);
             this.listBoxStudentDepartment.TabIndex = 6;
             // 
             // AddOrUpdateStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 864);
+            this.ClientSize = new System.Drawing.Size(558, 562);
             this.Controls.Add(this.listBoxStudentDepartment);
             this.Controls.Add(this.buttonStudentUpdate);
             this.Controls.Add(this.buttonStudentAdd);
             this.Controls.Add(this.textBoxLastName);
             this.Controls.Add(this.textBoxFirstName);
             this.Controls.Add(this.listBoxStudent);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AddOrUpdateStudent";
             this.Text = "AddOrUpdateStudent";
             this.ResumeLayout(false);
