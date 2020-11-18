@@ -40,3 +40,7 @@ C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationApp\obj\Debug\S
 C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationApp\obj\Debug\StudentRegistrationApp.csproj.CopyComplete
 C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationApp\obj\Debug\StudentRegistrationApp.exe
 C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationApp\obj\Debug\StudentRegistrationApp.pdb
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationApp\obj\Debug\StudentRegistrationApp.AddOrUpdateStudent.resources
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationApp\bin\Debug\StudentRegisatrationValidation.exe
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationApp\bin\Debug\StudentRegisatrationValidation.pdb
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegistrationApp\bin\Debug\StudentRegisatrationValidation.exe.config

@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFControllerUtilities", "EF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRegistrationApp", "StudentRegistrationApp\StudentRegistrationApp.csproj", "{5C768320-49B4-4BB5-9CF8-0504527C100F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRegisatrationValidation", "StudentRegisatrationValidation\StudentRegisatrationValidation.csproj", "{94E92DD3-2E72-4694-A0EC-0AE36C1D6042}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{5C768320-49B4-4BB5-9CF8-0504527C100F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C768320-49B4-4BB5-9CF8-0504527C100F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C768320-49B4-4BB5-9CF8-0504527C100F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94E92DD3-2E72-4694-A0EC-0AE36C1D6042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94E92DD3-2E72-4694-A0EC-0AE36C1D6042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94E92DD3-2E72-4694-A0EC-0AE36C1D6042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94E92DD3-2E72-4694-A0EC-0AE36C1D6042}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -82,6 +82,9 @@
     </Compile>
     <Compile Include="StudentRegistrationAppProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddOrUpdateStudent.resx">
+      <DependentUpon>AddOrUpdateStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -112,6 +115,10 @@
     <ProjectReference Include="..\EFControllerUtilities\EFControllerUtilities.csproj">
       <Project>{f7b44d6d-563a-4d6d-9718-b554924b4d97}</Project>
       <Name>EFControllerUtilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StudentRegisatrationValidation\StudentRegisatrationValidation.csproj">
+      <Project>{94e92dd3-2e72-4694-a0ec-0ae36c1d6042}</Project>
+      <Name>StudentRegisatrationValidation</Name>
     </ProjectReference>
     <ProjectReference Include="..\StudentRegistrationCodeFirstFromDB\StudentRegistrationCodeFirstFromDB.csproj">
       <Project>{0c5abe31-7faa-4edf-9e36-41889745268d}</Project>

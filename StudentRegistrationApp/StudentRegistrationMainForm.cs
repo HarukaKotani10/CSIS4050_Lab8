@@ -77,7 +77,6 @@ namespace StudentRegistrationApp
             };
 
 
-
             dataGrid.Columns.AddRange(columns);
 
 
@@ -85,39 +84,52 @@ namespace StudentRegistrationApp
             Department deparmtnet = new Department();
 
 
-/*            var studentCourse = from st in context.Students
-                                join cs in context.Courses o equals cs.CourseId
-                                
-                                where st.Courses == cs.Students
-                                select new {st.StudentLastName, st.StudentId,  }
-                                
+            /*            var studentCourse = from st in context.Students
+                                            join cs in context.Courses o equals cs.CourseId
 
-            foreach (Student student in context.Students)
-                foreach (Course course in student.Courses)
-                {
-
-                     dp = context.Departments
-                     .Where(b => b.DepartmentId == course.DepartmentId)
-                     .Select(b => b.DepartmentCode);
+                                            where st.Courses == cs.Students
+                                            select new {st.StudentLastName, st.StudentId,  }
 
 
-                }
+                        foreach (Student student in context.Students)
+                            foreach (Course course in student.Courses)
+                            {
 
+                                 dp = context.Departments
+                                 .Where(b => b.DepartmentId == course.DepartmentId)
+                                 .Select(b => b.DepartmentCode);
+
+
+                            }
+
+            */
+
+
+   
+
+  /*          var sortedCourse = from c in context.Courses
+                               join d in context.Departments
+                               on c.DepartmentId equals d.DepartmentId
+                               orderby d.DepartmentCode
+                               select c;
 */
 
-            
+            var sortedStudent = from s in context.Students
+                                join d in context.Departments
+                                on s.DepartmentId equals d.DepartmentId
+                                orderby d.DepartmentCode
+                                select s;
 
-            foreach (Student student in context.Students)
+
+
+            foreach (Student student in sortedStudent)
                 foreach (Course course in student.Courses)
-                    foreach (Department department in context.Departments.Where(c => c.DepartmentId == course.DepartmentId))
+                    foreach (Department d in context.Departments.Where(c => c.DepartmentId == course.DepartmentId))
                     {
-                        dataGrid.Rows.Add(new string[] { department.DepartmentCode.ToString(), course.CourseNumber.ToString(), course.CourseName,
+                        dataGrid.Rows.Add(new string[] { d.DepartmentCode.ToString(), course.CourseNumber.ToString(), course.CourseName,
                         student.StudentId.ToString(), student.StudentLastName});
                     }
-                   
-                
-                    
-
+         
         }
 
         /// <summary>
@@ -157,11 +169,11 @@ namespace StudentRegistrationApp
 
             // columns are autocreated, but skip the navigation properties
             // this MUST come after DataSource is set
+/*
+            foreach (string column in navProperties)
+                gridView.Columns[column].Visible = false;*/
 
-/*            foreach (string column in navProperties)
-                gridView.Columns[column].Visible = false;
-*/
-          
+
         }
 
 

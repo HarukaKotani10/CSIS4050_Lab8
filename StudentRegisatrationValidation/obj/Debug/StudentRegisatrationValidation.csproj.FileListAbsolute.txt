@@ -1,0 +1,13 @@
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegisatrationValidation\bin\Debug\StudentRegisatrationValidation.exe.config
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegisatrationValidation\bin\Debug\StudentRegisatrationValidation.exe
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegisatrationValidation\bin\Debug\StudentRegisatrationValidation.pdb
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegisatrationValidation\bin\Debug\StudentRegistrationCodeFirstFromDB.dll
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegisatrationValidation\bin\Debug\EntityFramework.dll
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegisatrationValidation\bin\Debug\StudentRegistrationCodeFirstFromDB.pdb
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegisatrationValidation\bin\Debug\StudentRegistrationCodeFirstFromDB.dll.config
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegisatrationValidation\bin\Debug\EntityFramework.xml
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegisatrationValidation\obj\Debug\StudentRegisatrationValidation.csprojAssemblyReference.cache
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegisatrationValidation\obj\Debug\StudentRegisatrationValidation.csproj.CoreCompileInputs.cache
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegisatrationValidation\obj\Debug\StudentRegisatrationValidation.csproj.CopyComplete
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegisatrationValidation\obj\Debug\StudentRegisatrationValidation.exe
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegisatrationValidation\obj\Debug\StudentRegisatrationValidation.pdb
