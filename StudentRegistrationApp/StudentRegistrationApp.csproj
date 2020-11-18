@@ -124,6 +124,10 @@
       <Project>{0c5abe31-7faa-4edf-9e36-41889745268d}</Project>
       <Name>StudentRegistrationCodeFirstFromDB</Name>
     </ProjectReference>
+    <ProjectReference Include="..\StudentRegistrationDB\StudentRegistrationDB.sqlproj">
+      <Project>{de947713-d7c0-430b-8308-9c8840fa952c}</Project>
+      <Name>StudentRegistrationDB</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

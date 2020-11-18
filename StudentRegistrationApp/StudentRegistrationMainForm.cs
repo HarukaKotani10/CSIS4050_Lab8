@@ -62,8 +62,10 @@ namespace StudentRegistrationApp
             // InitializeDataGridView<Student>(dataGridViewRegistration, "StudentCourses");
         }
 
+
         private void ItitializeDataGridViewRegistration(DataGridView dataGrid)
         {
+            dataGrid.Columns.Clear(); // any columns created by the designer, get rid of them
             dataGrid.ReadOnly = true;
             dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
@@ -167,10 +169,11 @@ namespace StudentRegistrationApp
 
             gridView.DataSource = SetBindingList<T>();
 
+         
             // columns are autocreated, but skip the navigation properties
             // this MUST come after DataSource is set
-/*
-            foreach (string column in navProperties)
+
+          /*  foreach (string column in navProperties)
                 gridView.Columns[column].Visible = false;*/
 
 
@@ -271,7 +274,7 @@ namespace StudentRegistrationApp
 
                 // ALWAYS update the customer orders report, hence use of AsNoTracking()
 
-                LoadStudentRegisterView();
+                ItitializeDataGridViewRegistration(dataGridViewRegistration);
             }
 
             // do not close, as the form object will be disposed, 
@@ -303,6 +306,7 @@ namespace StudentRegistrationApp
 
 
         }
+
 
         /// <summary>
         /// Save changes in the context and update the controls
