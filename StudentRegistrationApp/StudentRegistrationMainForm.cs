@@ -54,7 +54,7 @@ namespace StudentRegistrationApp
             InitializeDataGridView<Student>(dataGridViewStudent, "Students");
             InitializeDataGridView<Department>(dataGridViewDepartment, "Departments");
             InitializeDataGridView<Course>(dataGridViewCourse, "Courses");
-            ItitializeDataGridViewRegistration(dataGridViewRegistration);
+            UpdateRegistration();
 
             //  set unnecessary columns to invisible
             this.dataGridViewStudent.Columns["Courses"].Visible = false;
@@ -69,11 +69,13 @@ namespace StudentRegistrationApp
         /// <summary>
         /// Set up and reload registrationGridView 
         /// </summary>
-        private void ItitializeDataGridViewRegistration(DataGridView dataGrid)
+        private void UpdateRegistration()
         {
-            dataGrid.Columns.Clear(); // any columns created by the designer, get rid of them
-            dataGrid.ReadOnly = true;
-            dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataGridViewRegistration.Columns.Clear(); // any columns created by the designer, get rid of them
+            dataGridViewRegistration.ReadOnly = true;
+            dataGridViewRegistration.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
 
             DataGridViewColumn[] columns = new DataGridViewColumn[] {
                 new DataGridViewTextBoxColumn() { Name = "Department", Width = 100},
@@ -84,25 +86,14 @@ namespace StudentRegistrationApp
 
             };
 
-            dataGrid.Columns.AddRange(columns);
+            dataGridViewRegistration.Columns.AddRange(columns);
 
-            var sortedStudent = from s in context.Students
-                                join d in context.Departments
-                                on s.DepartmentId equals d.DepartmentId
-                                orderby d.DepartmentCode // sorte by departmentCode
-                                select s;
-
-            context.Courses.Include(d => d.Students).Load();
-
-            // add rows to registration table
-            foreach (Student student in sortedStudent)
-                foreach (Course course in student.Courses)
-                    foreach (Department d in context.Departments.Where(c => c.DepartmentId == course.DepartmentId))
-                    {
-                        dataGrid.Rows.Add(new string[] { d.DepartmentCode.ToString(), course.CourseNumber.ToString(), course.CourseName,
-                        student.StudentId.ToString(), student.StudentLastName});
-                    }
-
+       
+            foreach(var list in GetStudentCourseRegistrations())
+            {
+                dataGridViewRegistration.Rows.Add(new string[] { list.DepartmentCode, list.CourseNumber.ToString(), list.CourseName,
+                list.StudentID.ToString(), list.StudentLastName});
+            }
         }
 
 
@@ -114,6 +105,15 @@ namespace StudentRegistrationApp
         /// <param name="e"></param>
         private void ButtonRegister_Click(object sender, EventArgs e)
         {
+            StudentRegistrationEntities context = new StudentRegistrationEntities();
+
+            context.Students.Load();
+            context.Courses.Load();
+            context.Database.Log = (s => Debug.Write(s));
+            context.SaveChanges();
+
+            var students = context.Students.Include("Courses").ToList();
+            var courses = context.Courses.Include("Students").ToList();
 
             // check if bothe student and course are selected
             if (dataGridViewStudent.SelectedRows.Count == 0 || dataGridViewCourse.SelectedRows.Count == 0)
@@ -122,20 +122,37 @@ namespace StudentRegistrationApp
                 return;
             }
 
+            // get the selected students and keep in a list
 
-            foreach (DataGridViewRow studentRow in dataGridViewStudent.SelectedRows)
-                foreach (DataGridViewRow courseRow in dataGridViewCourse.SelectedRows)
+            List<Student> studentsToRegister = new List<Student>();
+
+            foreach(DataGridViewRow row in dataGridViewStudent.SelectedRows)
+            {
+                Student student = row.DataBoundItem as Student;
+                studentsToRegister.Add(students.Find(s => s.StudentId == student.StudentId));
+            }
+
+
+            List<Course> courseToRegister = new List<Course>();
+            foreach(DataGridViewRow row in dataGridViewCourse.SelectedRows)
+            {
+                Course course = row.DataBoundItem as Course;
+                courseToRegister.Add(courses.Find(c => c.CourseId == course.CourseId && c.DepartmentId == course.DepartmentId));
+            }
+
+            foreach(Course c in courseToRegister)
+            {
+                foreach(Student s in studentsToRegister)
                 {
-                    int studentId = (int)studentRow.Cells[0].Value; // get selected studentId
-                    int courseId = (int)studentRow.Cells[0].Value; // get selected courseId
-
-                    foreach (Student student in context.Students.Where(c => c.StudentId == studentId)) 
-                        foreach (Course course in context.Courses.Where(b => b.CourseId == courseId))
-                            foreach (Department d in context.Departments.Where(c => c.DepartmentId == course.DepartmentId))
-                                dataGridViewRegistration.Rows.Add(new string[] { d.DepartmentCode, course.CourseNumber.ToString(),
-                                course.CourseName, student.StudentId.ToString(), student.StudentLastName }); // add to the datagridview
-                    
+                    c.Students.Add(s);
                 }
+            }
+
+            context.SaveChanges();
+
+            UpdateRegistration();
+            context.Dispose();
+
             }
 
 
@@ -146,10 +163,40 @@ namespace StudentRegistrationApp
         /// <param name="e"></param>
         private void ButtonDrop_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dataGridViewRegistration.SelectedRows)
+            /* foreach (DataGridViewRow row in dataGridViewRegistration.SelectedRows)
+             {
+                 dataGridViewRegistration.Rows.RemoveAt(row.Index);
+             }*/
+
+            StudentRegistrationEntities context = new StudentRegistrationEntities();
+
+            context.Students.Load();
+            context.Courses.Load();
+            context.Database.Log = (s => Debug.Write(s));
+            context.SaveChanges();
+
+            // get the students and courses, and include nav properties
+            var students = context.Students.Include("Courses").ToList();
+            var courses = context.Courses.Include("Students").ToList();
+
+            foreach(DataGridViewRow row in dataGridViewRegistration.SelectedRows)
             {
-                dataGridViewRegistration.Rows.RemoveAt(row.Index);
+                StudentCourseRegistration registration = row.DataBoundItem as StudentCourseRegistration;
+
+                // find the student in the db
+                Student student = students.Find(s => s.StudentId == registration.StudentID);
+
+                // find the course in teh db
+                Course course = courses.Find(c => c.CourseNumber == registration.CourseNumber && c.DepartmentId == registration.course.DepartmentId);
+
+                student.Courses.Remove(course);
             }
+
+            context.SaveChanges();
+            context.Dispose();
+            UpdateRegistration();
+
+
         }
 
         /// <summary>
@@ -283,7 +330,7 @@ namespace StudentRegistrationApp
 
                 // ALWAYS update the registrationGridView, hence use of AsNoTracking()
 
-                ItitializeDataGridViewRegistration(dataGridViewRegistration);
+                UpdateRegistration();
             }
 
             // do not close, as the form object will be disposed, 
@@ -316,5 +363,59 @@ namespace StudentRegistrationApp
 
         }
 
+        List<StudentCourseRegistration> GetStudentCourseRegistrations()
+        {
+            List<StudentCourseRegistration> registrationList = new List<StudentCourseRegistration>();
+
+            List<Course> courses = Controller<StudentRegistrationEntities, Course>
+                .GetEntitiesWithIncluded("Students", "Department").ToList();
+
+            Debug.WriteLine("GetStudentCourseRegistration courses " + courses.Count);
+
+            foreach(Course course in courses)
+            {
+                foreach(Student student in course.Students)
+                {
+                    StudentCourseRegistration registration = new StudentCourseRegistration()
+                    {
+                        StudentID = student.StudentId,
+                        StudentLastName = student.StudentLastName,
+                        CourseNumber = course.CourseNumber,
+                        DepartmentCode = course.Department.DepartmentCode,
+                        CourseName = course.CourseName,
+                        student = student,
+                        course = course
+                    };
+
+                    registrationList.Add(registration);
+                }
+            }
+
+            return registrationList.OrderBy(r => r.DepartmentCode).OrderBy(r => r.CourseNumber).ToList();
+        }
+
+        private class StudentCourseRegistration
+        {
+            [DisplayName("Department")]
+            public string DepartmentCode { get; set; }
+
+            [DisplayName("Course Number")]
+            public int CourseNumber { get; set; }
+
+            [DisplayName("Course Name")]
+            public string CourseName { get; set; }
+
+            [DisplayName("Student ID")]
+            public int StudentID { get; set; }
+
+            [DisplayName("Last Name")]
+            public string StudentLastName { get; set; }
+
+            public Student student { get; set; }
+
+            public Course course { get; set; }
+        }
+
+         
     }
 }

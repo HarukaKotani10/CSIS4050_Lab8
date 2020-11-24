@@ -64,6 +64,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EFControllerUtilities\EFControllerUtilities.csproj">
+      <Project>{f7b44d6d-563a-4d6d-9718-b554924b4d97}</Project>
+      <Name>EFControllerUtilities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StudentRegistrationCodeFirstFromDB\StudentRegistrationCodeFirstFromDB.csproj">
       <Project>{0c5abe31-7faa-4edf-9e36-41889745268d}</Project>
       <Name>StudentRegistrationCodeFirstFromDB</Name>

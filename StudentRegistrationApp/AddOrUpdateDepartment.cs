@@ -10,6 +10,7 @@ namespace StudentRegistrationApp
     public partial class AddOrUpdateDepartment : Form
     {
         private StudentRegistrationEntities context;
+       
 
         public AddOrUpdateDepartment()
         {

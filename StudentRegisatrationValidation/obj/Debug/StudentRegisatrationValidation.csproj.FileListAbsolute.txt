@@ -28,3 +28,6 @@ C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegisatrationValidatio
 C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegisatrationValidation\obj\Debug\StudentRegisatrationValidation.csproj.CopyComplete
 C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegisatrationValidation\obj\Debug\StudentRegisatrationValidation.exe
 C:\Users\sangm\OneDrive\Desktop\Lab8\CSIS4050_Lab8\StudentRegisatrationValidation\obj\Debug\StudentRegisatrationValidation.pdb
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegisatrationValidation\bin\Debug\EFControllerUtilities.dll
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegisatrationValidation\bin\Debug\EFControllerUtilities.pdb
+C:\Users\17789\Documents\GitHub\CSIS4050_Lab8\StudentRegisatrationValidation\bin\Debug\EFControllerUtilities.dll.config
